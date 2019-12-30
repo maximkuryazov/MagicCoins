@@ -1,0 +1,2 @@
+# MagicCoins
+Mobile game

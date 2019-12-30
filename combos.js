@@ -1,0 +1,21 @@
+module.exports = {
+  0: ["coin", undefined, undefined],
+  1: ["coin", "coin", undefined],
+  2: ["coin", "coin", "coin"],
+  3: ["coin_bag", undefined, undefined],
+  4: ["coin_bag", "coin_bag", undefined],
+  5: ["coin_bag", "coin_bag", "coin_bag"],
+  6: ["shield", "shield", "shield"],
+  7: ["attack", "attack", "attack"],
+  8: ["attack", "attack", "attack"],
+  9: ["raid", "raid", "raid"],
+  10: ["raid", "raid", "raid"],
+  11: ["raid", "raid", "raid"],
+  12: ["raid", "raid", "raid"],
+  13: ["raid", "raid", "raid"],
+  14: ["raid", "raid", "raid"],
+  15: ["raid", "raid", "raid"],
+  16: ["spin", "spin", "spin"],
+  17: [undefined, undefined, undefined],
+  18: ["assist", "assist", "assist"]
+};

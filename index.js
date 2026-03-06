@@ -2,8 +2,8 @@ const fs = require("fs");
 const https = require("https");
 const http = require("http");
 const app = require("./app");
-const load = require("./load");
-load();
+const INIT = require("./load");
+INIT();
 
 const devMode = process.argv.includes("dev_mode");
 

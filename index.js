@@ -1,26 +1,11 @@
-let devMode = false;
-process.argv.forEach(val => {
-  if (val === "dev_mode") devMode = true;
-});
-
 const fs = require("fs");
 const https = require("https");
 const http = require("http");
-
-require("./users");
-require("./sessions");
-require("./items");
-require("./user_items");
-require("./slots");
-require("./events");
-require("./friendships");
-require("./ad_rewards");
-require("./news");
-
-require("./spins_timer").start();
-require("./fixing_timer").start();
-
 const app = require("./app");
+const bootstrap = require("./bootstrap");
+bootstrap();
+
+const devMode = process.argv.includes("dev_mode");
 
 if (!devMode) {
   const privateKey = fs.readFileSync(
@@ -35,7 +20,7 @@ if (!devMode) {
   const credentials = {
     key: privateKey,
     cert: certificate,
-    passphrase: "322538631abcdE"
+    passphrase: process.env.pass
   };
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(443);
